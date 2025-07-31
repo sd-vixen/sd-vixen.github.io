@@ -1,1 +1,108 @@
+/* Basic Reset & Body Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex; /* Use flexbox to easily center content if needed */
+    flex-direction: column; /* Stack header, main, footer vertically */
+    min-height: 100vh; /* Make sure body takes at least full viewport height */
+}
 
+/* Header Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header p {
+    margin-top: 0;
+    font-size: 0.9em;
+}
+
+/* Gallery Container Styling (Key for horizontal scroll) */
+.gallery-container {
+    display: flex; /* Arranges images in a row */
+    overflow-x: auto; /* Enables horizontal scrolling if content overflows */
+    white-space: nowrap; /* Prevents images from wrapping to the next line */
+    padding: 20px;
+    gap: 15px; /* Adds space between images */
+    align-items: center; /* Vertically centers images in the row */
+    flex-grow: 1; /* Allows the gallery to take up available space */
+    scrollbar-width: thin; /* Firefox scrollbar styling */
+    scrollbar-color: #888 #f1f1f1; /* Firefox scrollbar color */
+    -webkit-overflow-scrolling: touch; /* Improves scrolling on iOS */
+}
+
+/* Style the scrollbar for Webkit browsers (Chrome, Safari) */
+.gallery-container::-webkit-scrollbar {
+    height: 8px; /* Height of the horizontal scrollbar */
+}
+
+.gallery-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the scrollbar track */
+    border-radius: 10px;
+}
+
+.gallery-container::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px;
+}
+
+.gallery-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color when hovering over the scrollbar thumb */
+}
+
+
+/* Individual Image Styling */
+.gallery-container img {
+    height: 300px; /* Fixed height for all images */
+    width: auto; /* Maintain aspect ratio */
+    max-width: none; /* Override default img max-width for horizontal scroll */
+    object-fit: cover; /* Crops image to fit without distortion */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.gallery-container img:hover {
+    transform: scale(1.03); /* Slightly enlarge image on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Pushes footer to the bottom */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery-container img {
+        height: 200px; /* Smaller images on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        padding: 10px;
+        gap: 10px;
+    }
+    .gallery-container img {
+        height: 150px; /* Even smaller images on very small screens */
+    }
+    header h1 {
+        font-size: 1.8em;
+    }
+}
