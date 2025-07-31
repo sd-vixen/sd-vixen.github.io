@@ -1,3 +1,8 @@
-model1
-model2
-model3
+model1 - VixMixV1 (Meina)
+model2 - VixMixV2 (Divine)
+model3 - VixMixV3.5 (Orange)
+model4 - (Beta!) AnythingVix (Anything)
+model5 - SoftRealism (sfw realism)
+model6 - HardRealism (nsfw realism)
+model7 - VixHentai (menina)
+model8 - VixMixV3.5_Hardcore (orange hard)
